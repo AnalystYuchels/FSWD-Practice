@@ -9,7 +9,7 @@ app.get("/", (req,res) => {
   const today = new Date();
 
   const dayNumber = today.getDay();
-  
+
   const days = [
     "Sunday",
     "Monday",
