@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // View engine
-app.set("view engine", ejs);
+app.set("view engine", "ejs");
 
 // Static files
 app.use(express.static("public"));
@@ -19,7 +19,9 @@ app.use((req, res, next) => {
 
 //Home route
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    bandName: null
+  });
 });
 
 // Generate band name
