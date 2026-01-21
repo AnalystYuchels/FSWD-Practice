@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 // Generate band name
 app.post("/submit", (req, res) => {
   const randomAdj = adj[Math.floor(Math.random() * adj.length)];
-  const randomNoun = noun[Math.flooor(Math.random() * noun.length)];
+  const randomNoun = noun[Math.floor(Math.random() * noun.length)];
 
   res.render("index", {
     bandName: `${randomAdj} ${randomNoun}`,
